@@ -1,3 +1,4 @@
+import java.util.*; 
 public class room {
     // Properties
     private String code;
@@ -20,4 +21,18 @@ public class room {
     }
 
     // Constructors
+    public room(String code, int capacity) {
+        this.code = code;
+        this.capacity = capacity;
+    }
+
+    // Methods
+    public void printRoom(String code, int capacity) {
+        if (this.capacity < 1) {
+            System.out.print("Capacity must be above zero.");
+        }
+        // Make sure that code is unique
+
+        System.out.println("|" + this.code + "| Capacity: " + this.capacity + "|");
+    }
 }
