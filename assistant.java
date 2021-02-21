@@ -21,5 +21,9 @@ public class assistant {
     }
 
     // Constructors
+    public assistant(String email, String name) {
+        this.email = email;
+        this.name = name;
+    }
 
 }

@@ -34,4 +34,10 @@ public class bookingsystem {
     }
 
     // Constructors
+    public bookingsystem(bookableRoom[] bookableRooms,assistantOnShift[] assistantOnShift, bookings[] bookings, String time) {
+        this.bookableRooms = bookableRooms;
+        this.assistantOnShift = assistantOnShift;
+        this.bookings = bookings;
+        this.time = time;
+    }
 }

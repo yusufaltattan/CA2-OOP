@@ -20,5 +20,9 @@ public class universityResources {
     }
     
     // Constructors
+    public universityResources(room[] rooms, assistant[] assistants) {
+        this.rooms = rooms;
+        this.assistants = assistants;
+    }
 
 }

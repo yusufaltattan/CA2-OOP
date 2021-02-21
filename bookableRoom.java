@@ -34,5 +34,11 @@ public class bookableRoom {
     }
 
     // Constructors
+    public bookableRoom(universityResources[] rooms, String time, int occupancy, int statusRoom) {
+        this.rooms = rooms;
+        this.time = time;
+        this.occupancy = occupancy;
+        this.statusRoom = statusRoom;
+    }
 
 }

@@ -27,4 +27,9 @@ public class assistantOnShift {
     }
 
     // Constructors
+    public assistantOnShift(universityResources[] assistants, String time, int statusAssistant) {
+        this.assistants = assistants;
+        this.time = time;
+        this.statusAssistant = statusAssistant;
+    }
 }
