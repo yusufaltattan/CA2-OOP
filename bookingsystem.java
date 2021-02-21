@@ -1,13 +1,37 @@
 public class bookingsystem {
     // Properties
     private bookableRoom[] bookableRooms;
-    private assistantOnShift[] assistantsOnShift;
+    private assistantOnShift[] assistantOnShift;
     private bookings[] bookings;
     private String time;
 
     // Get Functions
+    public bookableRoom[] getBookableRooms() {
+        return this.bookableRooms;
+    }
+    public assistantOnShift[] getAssistantOnShifts() {
+        return this.assistantOnShift;
+    }
+    public bookings[] getBookings() {
+        return this.bookings;
+    }
+    public String getTime() {
+        return this.time;
+    }
 
     // Set Functions
+    public void setBookableRooms(bookableRoom[] bookableRooms) {
+        this.bookableRooms = bookableRooms;
+    }
+    public void setAssistantOnShift(assistantOnShift[] assistantOnShift) {
+        this.assistantOnShift = assistantOnShift;
+    }
+    public void setBookings(bookings[] bookings) {
+        this.bookings = bookings;
+    }
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     // Constructors
 }
