@@ -28,6 +28,7 @@ public class room {
 
     // Methods
     public void printRoom(String code, int capacity) {
+        // Prints Room
         if (this.capacity < 1) {
             System.out.print("Capacity must be above zero.");
         }

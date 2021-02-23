@@ -26,4 +26,10 @@ public class assistant {
         this.name = name;
     }
 
+    // Method
+    public void printAssistant() {
+        // Prints assistant
+        System.out.println(" | " + this.name + " | " + this.email + " | ");
+    }
+
 }
