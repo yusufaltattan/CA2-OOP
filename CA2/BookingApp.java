@@ -158,6 +158,29 @@ public class BookingApp {
           System.out.println("-1. Quit application.");
           System.out.println();
      }
+     public static void printBookableRoom_Add_Success(bookingsystem bookingsystem) {
+          // Case 2
+          System.out.println("Bookable Room added successfully:");
+          System.out.println();
+          System.out.println(bookingsystem.getBookableRooms().get((getBookableRooms().size())-1));
+          System.out.println("Please, enter one of the following:");
+          System.out.println();
+          System.out.println("The sequential ID listed to a room, a date (dd/mm/yyyy), and a time (HH:MM),separated by a white space.");
+          System.out.println("0. Back to main menu.");
+          System.out.println("-1. Quit application.");
+          System.out.println();
+     }
+     public static void printBookableRoom_Add_Error(bookingsystem bookingsystem) {
+          // Case 2
+          System.out.println("Error!");
+          // Message Explaining Error
+          System.out.println("Please, enter one of the following:");
+          System.out.println();
+          System.out.println("The sequential ID of an assistant and date (dd/mm/yyyy), separated by a white space.");
+          System.out.println("0. Back to main menu.");
+          System.out.println("-1. Quit application.");
+          System.out.println();
+     }
      public static void printBookableRoom_Remove(bookingsystem bookingsystem) {
           // Case 3
           System.out.println("University of Knowledge - COVID test");
@@ -175,7 +198,29 @@ public class BookingApp {
           System.out.println("-1. Quit application.");
           System.out.println();
      }
-
+     public static void printBookableRoom_Remove_Success(bookingsystem bookingsystem) {
+          // Case 3
+          System.out.println("Bookable Room removed successfully:");
+          // Print bookable room just removed
+          System.out.println("Please, enter one of the following:");
+          System.out.println();
+          System.out.println("The sequential ID to select the bookable room to be removed.");
+          System.out.println("0. Back to main menu.");
+          System.out.println("-1. Quit application.");
+          System.out.println();
+     }
+     public static void printBookableRoom_Remove_Error(bookingsystem bookingsystem) {
+          // Case 3
+          System.out.println("Error!");
+          // Message Explaining Error
+          System.out.println("Please, enter one of the following:");
+          System.out.println();
+          System.out.println("The sequential ID to select the bookable room to be removed.");
+          System.out.println("0. Back to main menu.");
+          System.out.println("-1. Quit application.");
+          System.out.println();
+     }
+     
 
      public static void printAssistantOnShift(universityResources universityResources) {
           // Case 4
@@ -212,7 +257,20 @@ public class BookingApp {
           // Case 5
           System.out.println("Assistant on Shift added successfully:");
           System.out.println();
-          System.out.println(bookingsystem.getAssistantOnShifts().get(assistantOnShift.size()-1));
+          System.out.println(bookingsystem.getAssistantOnShifts().get(getAssistantOnShift().size()-1));
+          System.out.println("Please, enter one of the following:");
+          System.out.println();
+          System.out.println(
+                    "The sequential ID of an assistant and date (dd/mm/yyyy), separated by a white space.");
+          System.out.println("0. Back to main menu.");
+          System.out.println("-1. Quit application.");
+          System.out.println();
+     }
+     public static void printAssistantOnShift_Add_Error(bookingsystem bookingsystem) {
+          // Case 5
+          System.out.println("Error!");
+          // Message explaining error
+          System.out.println();
           System.out.println("Please, enter one of the following:");
           System.out.println();
           System.out.println(
