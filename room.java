@@ -21,19 +21,19 @@ public class room {
     }
 
     // Constructors
+    public room() {
+    }
     public room(String code, int capacity) {
-        this.code = code;
-        this.capacity = capacity;
+        // Call default constructor
+        this();
+        // Set values
+        setCode(code);
+        setCapacity(capacity);
     }
 
     // Methods
-    public void printRoom(String code, int capacity) {
+    public void printRoom() {
         // Prints Room
-        if (this.capacity < 1) {
-            System.out.print("Capacity must be above zero.");
-        }
-        // Make sure that code is unique
-
-        System.out.println("|" + this.code + "| Capacity: " + this.capacity + "|");
+        System.out.println("|" + getCode() + "| Capacity: " + getCapacity() + "|");
     }
 }

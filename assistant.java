@@ -21,15 +21,18 @@ public class assistant {
     }
 
     // Constructors
+    public assistant() {
+    }
     public assistant(String email, String name) {
-        this.email = email;
-        this.name = name;
+        // Call default constructor
+        setEmail(email);
+        setName(name);
     }
 
     // Method
     public void printAssistant() {
         // Prints assistant
-        System.out.println(" | " + this.name + " | " + this.email + " | ");
+        System.out.println(" | " + getName() + " | " + getEmail() + " | ");
     }
 
 }

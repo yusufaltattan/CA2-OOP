@@ -1,35 +1,53 @@
+import java.util.Date;
+
 public class assistantOnShift {
     // Properties
-    private universityResources[] assistants;
-    private String time;
-    private int statusAssistant;
-    
+    private assistant assistant;
+    private Date timeSlot;
+    private String statusAssistant;
+
     // Get Functions
-    public universityResources[] getAssistants() {
-        return this.assistants;
+    public assistant getAssistant() {
+        return this.assistant;
     }
-    public String getTime() {
-        return this.time;
+
+    public Date getTimeSlot() {
+        return this.timeSlot;
     }
-    public int getStatusAssistant() {
+
+    public String getStatusAssistant() {
         return this.statusAssistant;
     }
 
     // Set Functions
-    public void setAssistants(universityResources[] assistants) {
-        this.assistants = assistants;
+    public void setAssistant(assistant assistant) {
+        this.assistant = assistant;
     }
-    public void setTime(String time) {
-        this.time = time;
+
+    public void setTime(Date timeSlot) {
+        this.timeSlot = timeSlot;
     }
-    public void setStatusAssistant(int statusAssistant) {
+
+    public void setStatusAssistant(String statusAssistant) {
         this.statusAssistant = statusAssistant;
     }
 
     // Constructors
-    public assistantOnShift(universityResources[] assistants, String time, int statusAssistant) {
-        this.assistants = assistants;
-        this.time = time;
-        this.statusAssistant = statusAssistant;
+    public assistantOnShift() {
+    }
+
+    public assistantOnShift(assistant assistant, Date timeSlot, String statusAssistant) {
+        // Call default constructor
+        this();
+        // Set Values
+        setAssistant(assistant);
+        setTime(timeSlot);
+        setStatusAssistant(statusAssistant);
+    }
+
+    // Methods
+    public void printAssistantOnShift() {
+        System.out.println(" | " + getTimeSlot() + " | " + getStatusAssistant() + " | " + assistant.getEmail() + " | ");
     }
 }
+

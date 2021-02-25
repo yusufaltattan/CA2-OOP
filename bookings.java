@@ -2,19 +2,27 @@ import java.util.*;
 
 public class bookings {
     // Properties
-    private bookingsystem[] bookingSystem;
-    private String time;
-    private int statusBooking;
+    private int identificationCode;
+    private bookableRoom bookableRoom;
+    private assistantOnShift assistantOnShift;
+    private Date TimeSlot;
+    private String statusBooking;
     private String studentEmail;
     
     // Get Functions
-    public bookingsystem[] getBookingSystem() {
-        return this.bookingSystem;
+    public int getIdentificationCode() {
+        return this.identificationCode;
     }
-    public String getTime() {
-        return this.time;
+    public bookableRoom getBookableRoom() {
+        return this.bookableRoom;
     }
-    public int getStatusBooking() {
+    public assistantOnShift getAssistantOnShift() {
+        return this.assistantOnShift;
+    }
+    public Date getTimeSlot() {
+        return this.TimeSlot;
+    }
+    public String getStatusBooking() {
         return this.statusBooking;
     }
     public String getStudentEmail() {
@@ -22,13 +30,19 @@ public class bookings {
     }
 
     // Set Functions
-    public void setBookingSystem(bookingsystem[] bookingSystem) {
-        this.bookingSystem = bookingSystem;
+    public void setIdentificationCode(int identificationCode) {
+        this.identificationCode = identificationCode;
     }
-    public void setTime(String time) {
-        this.time = time;
+    public void setBookableRoom(bookableRoom bookableRoom) {
+        this.bookableRoom = bookableRoom;
     }
-    public void setStatus(int statusBooking) {
+    public void setAssistantOnShift(assistantOnShift assistantOnShift) {
+        this.assistantOnShift = assistantOnShift;
+    }
+    public void setTime(Date TimeSlot) {
+        this.TimeSlot = TimeSlot;
+    }
+    public void setStatus(String statusBooking) {
         this.statusBooking = statusBooking;
     }
     public void setStudentEmail(String studentEmail) {
@@ -36,9 +50,8 @@ public class bookings {
     }
 
     // Constructors
-    public bookings(bookingsystem[] bookingSystem, String time, int statusBooking, String studentEmail) {
-        this.bookingSystem = bookingSystem;
-        this.time = time;
+    public bookings(Date TimeSlot, String statusBooking, String studentEmail) {
+        this.TimeSlot = TimeSlot;
         this.statusBooking = statusBooking;
         this.studentEmail = studentEmail;
     }
@@ -139,6 +152,6 @@ public class bookings {
             // If invalid
             // System.out.print("Error!" + "\n" + "<Message explaining error>"+ please + " to select the booking to be completed."+ ending);
         }
-        
+
     }
 }
