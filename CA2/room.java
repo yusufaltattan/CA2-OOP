@@ -7,6 +7,7 @@ public class room {
     private int capacity;
 
     // Get Functions
+    
 /** 
 * This returns the code
 * @return code
