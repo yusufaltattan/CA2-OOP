@@ -17,9 +17,6 @@ public class initdata {
 
      public static bookingsystem initializeBookingSystem() {
           var bookingsystem = new bookingsystem();
-          bookingsystem.addBookableRoom("RoomOne", newTimeSlot(2021,02,21), Date LocalTime.now());
-          bookingsystem.addBookableRoom(universityResources.getRoom()[0], "21/02/2021", "07:00");
-          
-
+          bookingsystem.addBookableRoom("RoomOne", newTimeSlot(2021,02,21), Date LocalTime.now());          
      }
 }
