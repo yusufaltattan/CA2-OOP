@@ -5,7 +5,6 @@ import java.util.Date;
 */
 public class bookings {
     // Properties
-    private int identificationCode;
     private String studentEmail;
     private bookableRoom bookableRoom;
     private assistantOnShift assistantOnShift;
@@ -13,13 +12,6 @@ public class bookings {
     private String statusBooking;
 
     // Get Functions
-/** 
-* This returns the identification code
-* @return identificationCode
-*/
-    public int getIdentificationCode() {
-        return this.identificationCode;
-    }
 /** 
 * This returns the bookable room
 * @return bookableRoom
@@ -58,12 +50,6 @@ public class bookings {
 
     // Set Functions
 /** 
-* This sets the identification code
-*/
-    public void setIdentificationCode(int identificationCode) {
-        this.identificationCode = identificationCode;
-    }
-/** 
 * This sets the bookable room
 */
     public void setBookableRoom(bookableRoom bookableRoom) {
@@ -98,16 +84,15 @@ public class bookings {
     public bookings() {
     }
 
-    public bookings(int identificationCode, String studentEmail, bookableRoom bookableRoom, assistantOnShift assistantOnShift, Date TimeSlot, String bookingStatus) {
+    public bookings(String studentEmail, bookableRoom bookableRoom, assistantOnShift assistantOnShift, Date TimeSlot, String bookingStatus) {
         // Call default constructor
         this();
         // Set Values
-        setIdentificationCode(identificationCode);
         setStudentEmail(studentEmail);
         setBookableRoom(bookableRoom);
         setAssistantOnShift(assistantOnShift);
         setTime(TimeSlot);
-        setStatus(statusBooking);
+        setStatus(bookingStatus);
     }
 
     // Methods
@@ -115,6 +100,6 @@ public class bookings {
 * This prints the booking
 */
     public void printBooking(){
-        System.out.println("|" + new SimpleDateFormat("dd/mm/yyyy HH:MM").format(getTimeSlot()) + " | " + getStatusBooking() + " | " + getAssistantOnShift().getAssistant().getEmail() + " | " + getBookableRoom().getRoom() );
+        System.out.println("|" + new SimpleDateFormat("dd/mm/yyyy HH:MM").format(getTimeSlot()) + " | " + getStatusBooking() + " | " + getAssistantOnShift().getAssistant().getEmail() + " | " + getStudentEmail() );
     }
 }
